@@ -19,6 +19,9 @@ import isEmail from 'validator/lib/isEmail';
 //firebase hook
 import {useFirebase} from '../../components/FirebaseProvider';
 
+//import apploading component
+import AppLoading from '../../components/AppLoading';
+
 function Registrasi() {
 
     const classes = useStyles();
@@ -31,7 +34,7 @@ function Registrasi() {
 
     const [isSubmitting, setSubmitting] = useState(false);
 
-    const {auth, user} = useFirebase();
+    const {auth, user, loading} = useFirebase();
 
     const handleChange = e=> {
 
@@ -93,8 +96,7 @@ function Registrasi() {
                 const newError = {};
 
                 switch(e.code) {
-                    auth/email-already-in-use
-                    case 'auth/eamail-already-in-use':
+                    case 'auth/email-already-in-use':
                         newError.email = 'Email sudah terdaftar';
                     break;
                     case 'auth/invalid-email':
@@ -118,9 +120,14 @@ function Registrasi() {
         }
     }
 
-    if(user) {
+    if(loading) {
 
-        return<Redirect to="/" />
+        return<AppLoading />
+    }
+
+    if (user) {
+
+        return <Redirect to="/" />
     }
     
     return <Container maxWidth="xs">
