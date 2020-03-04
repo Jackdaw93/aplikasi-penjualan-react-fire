@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 //import material ui
-import Container from '@material-ui/core/Container';
+import Container from 'import Container from '@material-ui/core/Container';';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 
