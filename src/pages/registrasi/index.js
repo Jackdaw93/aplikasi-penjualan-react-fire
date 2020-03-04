@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 //import komponen material ui
-import Container from 'import Container from '@material-ui/core/Container';';
+import Container from '@material-ui/core/Container';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';

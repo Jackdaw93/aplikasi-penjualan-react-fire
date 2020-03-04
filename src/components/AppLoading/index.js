@@ -2,7 +2,7 @@ import React from 'react';
 
 //material ui
 
-import Container from 'import Container from '@material-ui/core/Container';';
+import Container from  '@material-ui/core/Container';
 import LinearProgress from '@material-ui/core/LinearProgress';
 import Typography from '@material-ui/core/Typography';
 
